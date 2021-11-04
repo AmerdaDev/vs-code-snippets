@@ -53,12 +53,26 @@
 		],
 		"description": "if have_rows Statement"
 	},
+	"if have_posts": {
+		"prefix": "ifhp",
+		"body": [
+			"<?php if($1have_posts()): ?>"
+		],
+		"description": "if have_posts Statement"
+	},
 	"while have_rows": {
 		"prefix": "whr",
 		"body": [
-			"<?php while(have_rows('$1')): ?>"
+			"<?php while(have_rows('$1')): the_row(); ?>"
 		],
 		"description": "while have_rows Statement"
+	},
+	"while have_posts": {
+		"prefix": "whp",
+		"body": [
+			"<?php while($1have_posts()): $1the_post(); ?>"
+		],
+		"description": "while have_posts Statement"
 	},
 	"if get_sub_field": {
 		"prefix": "ifgets",
@@ -141,6 +155,15 @@
 		"prefix": "var_dump",
 		"body": [
 			"<?php var_dump($1); ?>"
+		],
+		"description": "Var Dump"
+	},
+	"Print_r": {
+		"prefix": "prr",
+		"body": [
+			"<pre>",
+			"<?php print_r($1); ?>",
+			"</pre>"
 		],
 		"description": "Var Dump"
 	},

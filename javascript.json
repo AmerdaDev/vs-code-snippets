@@ -14,5 +14,19 @@
 		  "***/"
 		],
 		"description": "Comment"
+	},
+	"Slick": {
+		"prefix": "slick-slider",
+		"body": [
+		  "$$('$1').slick({",
+		  "        arrows: true,",
+		  "        nextArrow: '<span class=\"arrow-next\"></span>',",
+		  "        prevArrow: '<span class=\"arrow-prev\"></span>',",
+		  "        slidesToShow: 3,",
+		  "        slidesToScroll: 1,",
+		  "        dots: false",
+		  "    });"
+		],
+		"description": "Slick"
 	}
 }
